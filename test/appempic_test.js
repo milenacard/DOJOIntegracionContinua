@@ -10,7 +10,7 @@ describe('appempic', function () {
   }); */
 
   it('El nombre debe ser Milena', function () {
-    appempic.getName().should.equal('Milena1'); 
+    appempic.getName().should.equal('Milena'); 
   });
 
    it('El apellido debe ser Card', function () {

@@ -1,11 +1,19 @@
 var express = require('express');
 var app = express();
+var appempic = require('./appempic');
 
 app.set('port', (process.env.PORT || 3000));
 app.use(express.static(__dirname + '/public'));
 
+/*  response.send('Hello World');
+});
+
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+}); */
+
 app.get('/', function(request, response) {
-  response.send('Hello World');
+  response.send('Hello World' + " " + appempic.getName() + " " + appempic.getLastName());
 });
 
 app.listen(app.get('port'), function() {
